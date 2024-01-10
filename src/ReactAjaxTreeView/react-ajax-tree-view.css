@@ -1,0 +1,70 @@
+.react-ajax-tree-view {
+  font-size: 16px;
+  padding: 16px 16px 8px 16px;
+  border: 1px solid #d2d4dd;
+  border-radius: 8px;
+}
+
+.react-ajax-tree-view .item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.react-ajax-tree-view .item > .content > .icon {
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: center no-repeat;
+  background-size: cover;
+  transition: all ease-in-out 200ms;
+}
+
+.react-ajax-tree-view .item > .content > .icon.loading {
+  background-image: url(./loading.svg);
+  animation: rotate-infinite 2s infinite linear;
+}
+
+.react-ajax-tree-view .item > .content > .icon.final {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  background-image: url(./final.svg);
+}
+
+@keyframes rotate-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359.999999deg);
+  }
+}
+
+.react-ajax-tree-view .item > .content > .icon.expand {
+  background-image: url(./expand.svg);
+}
+
+.react-ajax-tree-view .item > .content > .icon.collapse {
+  background-image: url(./collapse.svg);
+}
+
+.react-ajax-tree-view .item > .content > .text {
+  float: left;
+  margin-left: 8px;
+}
+
+.react-ajax-tree-view .item > .content > .text.last {
+  margin-left: 28px;
+}
+
+.react-ajax-tree-view .item > .content:hover > .text {
+  color: #07f;
+  box-shadow: 0 1px 0 0 #07f;
+  transition: all ease-in-out 300ms;
+}
+
+.react-ajax-tree-view .item > .children {
+  margin: 8px 0 0 16px;
+}
